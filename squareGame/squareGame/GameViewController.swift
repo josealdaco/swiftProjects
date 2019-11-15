@@ -1,9 +1,9 @@
 //
 //  GameViewController.swift
-//  Game-Starter-Empty
+//  squareGame
 //
-//  Created by mitchell hudson on 9/13/18.
-//  Copyright © 2018 Make School. All rights reserved.
+//  Created by Jose Arellanes on 11/14/19.
+//  Copyright © 2019 Jose Arellanes. All rights reserved.
 //
 
 import UIKit
@@ -11,18 +11,19 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
-            let scene = GameScene(size: view.bounds.size)
-            // Set the scale mode to scale to fit the window
-            scene.scaleMode = .aspectFill
-          
-            // Present the scene
-            view.presentScene(scene)
+            if let scene = SKScene(fileNamed: "GameScene") {
+                // Set the scale mode to scale to fit the window
+                scene.scaleMode = .aspectFill
+                
+                // Present the scene
+                view.presentScene(scene)
+            }
             
             view.ignoresSiblingOrder = true
             
@@ -41,11 +42,6 @@ class GameViewController: UIViewController {
         } else {
             return .all
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
     }
 
     override var prefersStatusBarHidden: Bool {
