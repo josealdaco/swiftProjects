@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:assets-1.atlas"
+      name = "assets-1.atlas">
+      <FileRef
+         location = "group:character2@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:tap_left@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:life_bg@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:roll@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:tap_right@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:chopstick@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:character1@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:life@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:character3@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:button@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/josearellanes/Library/Autosave Information/SushiNeko/SushiNeko/background@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:mat@2x.png">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "self:SushiNeko.xcodeproj">
+   </FileRef>
+</Workspace>
