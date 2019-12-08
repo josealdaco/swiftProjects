@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var displayButton: UILabel!
     @IBOutlet weak var gameTitle: UILabel!
     
+    @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var pauseButton: UIButton!
@@ -31,7 +32,22 @@ class ViewController: UIViewController {
         scoreLabel.text = "Score \(points)"
         }
     }
-    var timer:String = " Time: 2:00"
+    var timer:Double = 60.0{
+        didSet{
+            timeLabel.text = "Time:\(timer)s"
+        }
+    }
+    
+    var paused:Bool = false{
+        didSet{
+            if paused == true{
+            pauseButton.setTitle("unPause", for: .normal)
+            }
+            else{
+                pauseButton.setTitle("Pause", for: .normal)
+            }
+        }
+    }
     
     
     var answerTitle:String = ""
@@ -39,6 +55,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
         // Do any additional setup after loading the view.
+    }
+    
+    fileprivate func timeFunction(){
+        /*  Timer function here*/
+        _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timerCheck in
+            if self.timer == 0.0 || self.paused == true{
+                timerCheck.invalidate() // Stop Timer
+                self.restart() // disables all buttons if paused or time is out
+            }
+             self.timer = self.timer - 1.0
+        })
+    }
+    
+    fileprivate func restart(){
+        /* Will activate if timer has been resetted to 0*/
+
+            restartButton.isEnabled = true
+            restartButton.isHidden = false
+            yesButton.isEnabled = false
+            noButton.isEnabled = false
+            pauseButton.isEnabled = false
     }
 
     fileprivate func changeColor(){
@@ -52,16 +89,19 @@ class ViewController: UIViewController {
     
     
     fileprivate func setupViews() {
-        
+        restartButton.isEnabled = false
+        restartButton.isHidden = true
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Boom.jpg")!)
         answerButton!.backgroundColor = UIColor.black
         displayButton!.backgroundColor = UIColor.black
         yesButton!.backgroundColor = UIColor.black
         noButton!.backgroundColor = UIColor.black
         scoreLabel.text = "Score: \(points)"
-        timeLabel.text = timer
+        timeLabel.text = "Time:\(timer)"
+        pauseButton.setTitle("Pause", for: .normal)
         changeColor()
         buttonAnswer()
+        timeFunction()
        }
     
    
@@ -73,26 +113,47 @@ class ViewController: UIViewController {
     @IBAction func yesButtonTrigger(_ sender: Any) {
         let textColor = keyColors[answerButton.text!]  // Gives a UI color
         if textColor == displayButton.textColor{
-            points += 1
+            points += 10
             changeColor()
         }
         else{
             changeColor()
-            print("Wrong")
+            if points != 0{
+            points -= 10
+            }
         }
         
     }
     
     @IBAction func noButtonTrigger(_ sender: Any) {
         let textColor = keyColors[answerButton.text!]  // Gives a UI color
-               if textColor == displayButton.textColor{
-                   points += 1
+               if textColor != displayButton.textColor{
+                   points += 10
                    changeColor()
                }
                else{
                    changeColor()
-                   print("Wrong")
+                if points != 0{
+                   points -= 10
+                }
                }
     }
+    
+    
+    @IBAction func pauseButtonTrigger(_ sender: Any) {
+        if pauseButton.currentTitle! == "Pause"{
+            paused = true
+        }
+        else{
+            paused = false
+            timeFunction()
+        }
+    }
+    
+    
+    @IBAction func restartButtonTrigger(_ sender: Any) {
+        
+    }
+    
 }
 

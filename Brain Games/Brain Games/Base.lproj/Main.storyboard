@@ -53,14 +53,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Hz-5H-7jP">
-                                <rect key="frame" x="22" y="44" width="42" height="30"/>
+                                <rect key="frame" x="22" y="44" width="72" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Pause">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="pauseButtonTrigger:" destination="BYZ-38-t0r" eventType="touchUpInside" id="boB-Ox-HtT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhl-JF-vkn">
-                                <rect key="frame" x="278" y="44" width="68" height="30"/>
+                                <rect key="frame" x="250" y="44" width="96" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -73,6 +76,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Be7-ka-H9u">
+                                <rect key="frame" x="136" y="605" width="143" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="RESTART"/>
+                                <connections>
+                                    <action selector="restartButtonTrigger:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y4A-qR-oot"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -82,6 +93,7 @@
                         <outlet property="gameTitle" destination="Whj-dy-pW6" id="5EX-9h-ezm"/>
                         <outlet property="noButton" destination="xzI-XW-Oy1" id="c31-GS-prv"/>
                         <outlet property="pauseButton" destination="2Hz-5H-7jP" id="0tP-6O-c6d"/>
+                        <outlet property="restartButton" destination="Be7-ka-H9u" id="aOJ-5i-2at"/>
                         <outlet property="scoreLabel" destination="Hhl-JF-vkn" id="VEa-QY-TRL"/>
                         <outlet property="timeLabel" destination="mT9-nc-hCb" id="Rhu-9F-hmw"/>
                         <outlet property="yesButton" destination="NWL-Oj-I2h" id="eL6-US-ymQ"/>
