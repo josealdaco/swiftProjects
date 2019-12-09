@@ -16,6 +16,8 @@
 		E52A6F91239C2F500022C79E /* Brain_GamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A6F90239C2F500022C79E /* Brain_GamesTests.swift */; };
 		E52A6F9C239C2F510022C79E /* Brain_GamesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A6F9B239C2F510022C79E /* Brain_GamesUITests.swift */; };
 		E52A6FAB239C336A0022C79E /* Boom.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E52A6FAA239C336A0022C79E /* Boom.jpg */; };
+		E52A6FAD239DCA300022C79E /* correct-symbol.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A6FAC239DCA2F0022C79E /* correct-symbol.png */; };
+		E52A6FAF239DCA360022C79E /* wrong-symbol.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A6FAE239DCA360022C79E /* wrong-symbol.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		E52A6F9B239C2F510022C79E /* Brain_GamesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain_GamesUITests.swift; sourceTree = "<group>"; };
 		E52A6F9D239C2F510022C79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E52A6FAA239C336A0022C79E /* Boom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Boom.jpg; sourceTree = "<group>"; };
+		E52A6FAC239DCA2F0022C79E /* correct-symbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "correct-symbol.png"; sourceTree = "<group>"; };
+		E52A6FAE239DCA360022C79E /* wrong-symbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wrong-symbol.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,8 @@
 		E52A6FA9239C306C0022C79E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E52A6FAE239DCA360022C79E /* wrong-symbol.png */,
+				E52A6FAC239DCA2F0022C79E /* correct-symbol.png */,
 				E52A6FAA239C336A0022C79E /* Boom.jpg */,
 			);
 			path = Images;
@@ -247,6 +253,8 @@
 				E52A6F86239C2F500022C79E /* LaunchScreen.storyboard in Resources */,
 				E52A6F83239C2F500022C79E /* Assets.xcassets in Resources */,
 				E52A6F81239C2F4E0022C79E /* Main.storyboard in Resources */,
+				E52A6FAD239DCA300022C79E /* correct-symbol.png in Resources */,
+				E52A6FAF239DCA360022C79E /* wrong-symbol.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var displayButton: UILabel!
     @IBOutlet weak var gameTitle: UILabel!
-    
+    @IBOutlet weak var wrontIcon: UIImageView!
+    @IBOutlet weak var correctIcon: UIImageView!
     @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -60,23 +61,35 @@ class ViewController: UIViewController {
     fileprivate func timeFunction(){
         /*  Timer function here*/
         _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timerCheck in
-            if self.timer == 0.0 || self.paused == true{
+            if self.paused == true{
                 timerCheck.invalidate() // Stop Timer
-                self.restart() // disables all buttons if paused or time is out
+                self.disableAllButtons() // disables all buttons if paused or time is out
+            }
+            else if self.timer == 0.0 {
+                timerCheck.invalidate()
+                self.restartGame()
+                self.disableAllButtons()
+                self.pauseButton.isEnabled = false
             }
              self.timer = self.timer - 1.0
         })
     }
     
-    fileprivate func restart(){
+    fileprivate func restartGame(){
+        restartButton.isHidden = false
+        restartButton.isEnabled = true
+    }
+    fileprivate func disableAllButtons(){
         /* Will activate if timer has been resetted to 0*/
-
-            restartButton.isEnabled = true
-            restartButton.isHidden = false
             yesButton.isEnabled = false
             noButton.isEnabled = false
-            pauseButton.isEnabled = false
     }
+    fileprivate func enableAllButtons(){
+           /* Will activate if timer has been resetted to 0*/
+               yesButton.isEnabled = true
+               noButton.isEnabled = true
+       }
+    
 
     fileprivate func changeColor(){
              let answerColorChoice = colors[Int.random(in: 0..<colors.count)]
@@ -89,6 +102,8 @@ class ViewController: UIViewController {
     
     
     fileprivate func setupViews() {
+        correctIcon.isHidden = true
+        wrontIcon.isHidden = true
         restartButton.isEnabled = false
         restartButton.isHidden = true
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Boom.jpg")!)
@@ -115,12 +130,28 @@ class ViewController: UIViewController {
         if textColor == displayButton.textColor{
             points += 10
             changeColor()
+           _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false, block: { timerCheck in
+            
+            _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false, block: { timerCheck in
+                self.correctIcon.isHidden = true
+            })
+            self.correctIcon.isHidden = false
+            
+                                 })
         }
         else{
             changeColor()
             if points != 0{
             points -= 10
             }
+            _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false, block: { timerCheck in
+                
+                _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false, block: { timerCheck in
+                    self.wrontIcon.isHidden = true
+                })
+                self.wrontIcon.isHidden = false
+                
+                                     })
         }
         
     }
@@ -130,12 +161,27 @@ class ViewController: UIViewController {
                if textColor != displayButton.textColor{
                    points += 10
                    changeColor()
+                _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false, block: { timerCheck in
+                
+                _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false, block: { timerCheck in
+                    self.correctIcon.isHidden = true
+                })
+                self.correctIcon.isHidden = false
+                                     })
                }
                else{
                    changeColor()
                 if points != 0{
                    points -= 10
                 }
+                _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false, block: { timerCheck in
+                
+                _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false, block: { timerCheck in
+                    self.wrontIcon.isHidden = true
+                })
+                self.wrontIcon.isHidden = false
+                
+                                     })
                }
     }
     
@@ -146,13 +192,21 @@ class ViewController: UIViewController {
         }
         else{
             paused = false
+            enableAllButtons()
             timeFunction()
         }
     }
     
     
     @IBAction func restartButtonTrigger(_ sender: Any) {
-        
+        restartButton.isHidden = true
+        restartButton.isEnabled = false
+        timer = 60.0
+        points = 0
+        changeColor()
+        enableAllButtons()
+        timeFunction()
+        pauseButton.isEnabled = true
     }
     
 }
