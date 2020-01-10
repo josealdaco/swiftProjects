@@ -1,0 +1,819 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48FB0950ADCF3426CB738AF3 /* Pods_Plant_Watch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56A3CA9BE6C06A1BA6098CD /* Pods_Plant_Watch.framework */; };
+		7920BB8A0AB8C10E1D671C00 /* Pods_Plant_WatchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4687C85E625355004E18B7C9 /* Pods_Plant_WatchTests.framework */; };
+		E57126E923C7C53C00DBD61A /* BTDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = E57126E523C7C53C00DBD61A /* BTDiscovery.m */; };
+		E57126EA23C7C53C00DBD61A /* BTService.m in Sources */ = {isa = PBXBuildFile; fileRef = E57126E623C7C53C00DBD61A /* BTService.m */; };
+		E57126F023C7C9D100DBD61A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57126EF23C7C9D100DBD61A /* File.swift */; };
+		E580276D23C4FE6100FE1961 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580276C23C4FE6100FE1961 /* AppDelegate.swift */; };
+		E580276F23C4FE6100FE1961 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580276E23C4FE6100FE1961 /* SceneDelegate.swift */; };
+		E580277323C4FE6300FE1961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E580277223C4FE6300FE1961 /* Assets.xcassets */; };
+		E580277623C4FE6300FE1961 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E580277523C4FE6300FE1961 /* Preview Assets.xcassets */; };
+		E580277923C4FE6300FE1961 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E580277723C4FE6300FE1961 /* LaunchScreen.storyboard */; };
+		E580278423C4FE6300FE1961 /* Plant_WatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580278323C4FE6300FE1961 /* Plant_WatchTests.swift */; };
+		E580278F23C4FE6300FE1961 /* Plant_WatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580278E23C4FE6300FE1961 /* Plant_WatchUITests.swift */; };
+		E580279E23C5057300FE1961 /* mainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580279D23C5057300FE1961 /* mainView.swift */; };
+		E58027A123C505A100FE1961 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58027A023C505A100FE1961 /* mainViewController.swift */; };
+		E5FDF93D23C6615E00CEDFC7 /* userView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FDF93C23C6615E00CEDFC7 /* userView.swift */; };
+		E5FDF94023C67D4100CEDFC7 /* colorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FDF93F23C67D4100CEDFC7 /* colorExtensions.swift */; };
+		FA02648AA4A1E056265C2D46 /* Pods_Plant_Watch_Plant_WatchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B10ABEE9E27A5ED9178006B /* Pods_Plant_Watch_Plant_WatchUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E580278023C4FE6300FE1961 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E580276123C4FE6100FE1961 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E580276823C4FE6100FE1961;
+			remoteInfo = "Plant Watch";
+		};
+		E580278B23C4FE6300FE1961 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E580276123C4FE6100FE1961 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E580276823C4FE6100FE1961;
+			remoteInfo = "Plant Watch";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0968BFD903ED02DD10731714 /* Pods-Plant Watch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plant Watch.release.xcconfig"; path = "Target Support Files/Pods-Plant Watch/Pods-Plant Watch.release.xcconfig"; sourceTree = "<group>"; };
+		1B10ABEE9E27A5ED9178006B /* Pods_Plant_Watch_Plant_WatchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plant_Watch_Plant_WatchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		219B4C64EEBCFE273AD93162 /* Pods-Plant WatchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plant WatchTests.release.xcconfig"; path = "Target Support Files/Pods-Plant WatchTests/Pods-Plant WatchTests.release.xcconfig"; sourceTree = "<group>"; };
+		23AF332EDFFED36F1046BEC1 /* Pods-Plant Watch-Plant WatchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plant Watch-Plant WatchUITests.release.xcconfig"; path = "Target Support Files/Pods-Plant Watch-Plant WatchUITests/Pods-Plant Watch-Plant WatchUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4687C85E625355004E18B7C9 /* Pods_Plant_WatchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plant_WatchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8900D52127B00FE21BBB0E3F /* Pods-Plant Watch-Plant WatchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plant Watch-Plant WatchUITests.debug.xcconfig"; path = "Target Support Files/Pods-Plant Watch-Plant WatchUITests/Pods-Plant Watch-Plant WatchUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A56A3CA9BE6C06A1BA6098CD /* Pods_Plant_Watch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plant_Watch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE458EC8439A0370E3D4AA9 /* Pods-Plant Watch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plant Watch.debug.xcconfig"; path = "Target Support Files/Pods-Plant Watch/Pods-Plant Watch.debug.xcconfig"; sourceTree = "<group>"; };
+		D2D9565BCB95CB793F0EE53E /* Pods-Plant WatchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plant WatchTests.debug.xcconfig"; path = "Target Support Files/Pods-Plant WatchTests/Pods-Plant WatchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E57126E523C7C53C00DBD61A /* BTDiscovery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTDiscovery.m; sourceTree = "<group>"; };
+		E57126E623C7C53C00DBD61A /* BTService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTService.m; sourceTree = "<group>"; };
+		E57126E723C7C53C00DBD61A /* BTDiscovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTDiscovery.h; sourceTree = "<group>"; };
+		E57126E823C7C53C00DBD61A /* BTService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTService.h; sourceTree = "<group>"; };
+		E57126EF23C7C9D100DBD61A /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		E580276923C4FE6100FE1961 /* Plant Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plant Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E580276C23C4FE6100FE1961 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E580276E23C4FE6100FE1961 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E580277223C4FE6300FE1961 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E580277523C4FE6300FE1961 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E580277823C4FE6300FE1961 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E580277A23C4FE6300FE1961 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E580277F23C4FE6300FE1961 /* Plant WatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Plant WatchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E580278323C4FE6300FE1961 /* Plant_WatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant_WatchTests.swift; sourceTree = "<group>"; };
+		E580278523C4FE6300FE1961 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E580278A23C4FE6300FE1961 /* Plant WatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Plant WatchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E580278E23C4FE6300FE1961 /* Plant_WatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant_WatchUITests.swift; sourceTree = "<group>"; };
+		E580279023C4FE6300FE1961 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E580279D23C5057300FE1961 /* mainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainView.swift; sourceTree = "<group>"; };
+		E58027A023C505A100FE1961 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		E58027A223C5097B00FE1961 /* open_terminal.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = open_terminal.sh; sourceTree = "<group>"; };
+		E5FDF93C23C6615E00CEDFC7 /* userView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userView.swift; sourceTree = "<group>"; };
+		E5FDF93F23C67D4100CEDFC7 /* colorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorExtensions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E580276623C4FE6100FE1961 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48FB0950ADCF3426CB738AF3 /* Pods_Plant_Watch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E580277C23C4FE6300FE1961 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7920BB8A0AB8C10E1D671C00 /* Pods_Plant_WatchTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E580278723C4FE6300FE1961 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA02648AA4A1E056265C2D46 /* Pods_Plant_Watch_Plant_WatchUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A3C50ED53FAF3B56A84476A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CEE458EC8439A0370E3D4AA9 /* Pods-Plant Watch.debug.xcconfig */,
+				0968BFD903ED02DD10731714 /* Pods-Plant Watch.release.xcconfig */,
+				8900D52127B00FE21BBB0E3F /* Pods-Plant Watch-Plant WatchUITests.debug.xcconfig */,
+				23AF332EDFFED36F1046BEC1 /* Pods-Plant Watch-Plant WatchUITests.release.xcconfig */,
+				D2D9565BCB95CB793F0EE53E /* Pods-Plant WatchTests.debug.xcconfig */,
+				219B4C64EEBCFE273AD93162 /* Pods-Plant WatchTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B78E1B09287E7F2A157880B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A56A3CA9BE6C06A1BA6098CD /* Pods_Plant_Watch.framework */,
+				1B10ABEE9E27A5ED9178006B /* Pods_Plant_Watch_Plant_WatchUITests.framework */,
+				4687C85E625355004E18B7C9 /* Pods_Plant_WatchTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E57126E423C7C53C00DBD61A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E57126E523C7C53C00DBD61A /* BTDiscovery.m */,
+				E57126E623C7C53C00DBD61A /* BTService.m */,
+				E57126E723C7C53C00DBD61A /* BTDiscovery.h */,
+				E57126E823C7C53C00DBD61A /* BTService.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E57126EE23C7C9B900DBD61A /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				E57126EF23C7C9D100DBD61A /* File.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		E580276023C4FE6100FE1961 = {
+			isa = PBXGroup;
+			children = (
+				E58027A223C5097B00FE1961 /* open_terminal.sh */,
+				E580276B23C4FE6100FE1961 /* Plant Watch */,
+				E580278223C4FE6300FE1961 /* Plant WatchTests */,
+				E580278D23C4FE6300FE1961 /* Plant WatchUITests */,
+				E580276A23C4FE6100FE1961 /* Products */,
+				4A3C50ED53FAF3B56A84476A /* Pods */,
+				B78E1B09287E7F2A157880B6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E580276A23C4FE6100FE1961 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E580276923C4FE6100FE1961 /* Plant Watch.app */,
+				E580277F23C4FE6300FE1961 /* Plant WatchTests.xctest */,
+				E580278A23C4FE6300FE1961 /* Plant WatchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E580276B23C4FE6100FE1961 /* Plant Watch */ = {
+			isa = PBXGroup;
+			children = (
+				E57126EE23C7C9B900DBD61A /* New Group */,
+				E57126E423C7C53C00DBD61A /* Classes */,
+				E5FDF93E23C67D1B00CEDFC7 /* Extensions */,
+				E580279F23C5058300FE1961 /* ViewController */,
+				E580279C23C5054F00FE1961 /* View */,
+				E580276C23C4FE6100FE1961 /* AppDelegate.swift */,
+				E580276E23C4FE6100FE1961 /* SceneDelegate.swift */,
+				E580277223C4FE6300FE1961 /* Assets.xcassets */,
+				E580277723C4FE6300FE1961 /* LaunchScreen.storyboard */,
+				E580277A23C4FE6300FE1961 /* Info.plist */,
+				E580277423C4FE6300FE1961 /* Preview Content */,
+			);
+			path = "Plant Watch";
+			sourceTree = "<group>";
+		};
+		E580277423C4FE6300FE1961 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E580277523C4FE6300FE1961 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E580278223C4FE6300FE1961 /* Plant WatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				E580278323C4FE6300FE1961 /* Plant_WatchTests.swift */,
+				E580278523C4FE6300FE1961 /* Info.plist */,
+			);
+			path = "Plant WatchTests";
+			sourceTree = "<group>";
+		};
+		E580278D23C4FE6300FE1961 /* Plant WatchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E580278E23C4FE6300FE1961 /* Plant_WatchUITests.swift */,
+				E580279023C4FE6300FE1961 /* Info.plist */,
+			);
+			path = "Plant WatchUITests";
+			sourceTree = "<group>";
+		};
+		E580279C23C5054F00FE1961 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E580279D23C5057300FE1961 /* mainView.swift */,
+				E5FDF93C23C6615E00CEDFC7 /* userView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E580279F23C5058300FE1961 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E58027A023C505A100FE1961 /* mainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E5FDF93E23C67D1B00CEDFC7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E5FDF93F23C67D4100CEDFC7 /* colorExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E580276823C4FE6100FE1961 /* Plant Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E580279323C4FE6300FE1961 /* Build configuration list for PBXNativeTarget "Plant Watch" */;
+			buildPhases = (
+				3DF94BE91B1242526B771D6A /* [CP] Check Pods Manifest.lock */,
+				E580276523C4FE6100FE1961 /* Sources */,
+				E580276623C4FE6100FE1961 /* Frameworks */,
+				E580276723C4FE6100FE1961 /* Resources */,
+				EBDDDB7E690755B023079D7A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Plant Watch";
+			productName = "Plant Watch";
+			productReference = E580276923C4FE6100FE1961 /* Plant Watch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E580277E23C4FE6300FE1961 /* Plant WatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E580279623C4FE6300FE1961 /* Build configuration list for PBXNativeTarget "Plant WatchTests" */;
+			buildPhases = (
+				ACB0E5F134C6EA1D77B8BF1E /* [CP] Check Pods Manifest.lock */,
+				E580277B23C4FE6300FE1961 /* Sources */,
+				E580277C23C4FE6300FE1961 /* Frameworks */,
+				E580277D23C4FE6300FE1961 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E580278123C4FE6300FE1961 /* PBXTargetDependency */,
+			);
+			name = "Plant WatchTests";
+			productName = "Plant WatchTests";
+			productReference = E580277F23C4FE6300FE1961 /* Plant WatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E580278923C4FE6300FE1961 /* Plant WatchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E580279923C4FE6300FE1961 /* Build configuration list for PBXNativeTarget "Plant WatchUITests" */;
+			buildPhases = (
+				9095E441D05AD55CE31BEF41 /* [CP] Check Pods Manifest.lock */,
+				E580278623C4FE6300FE1961 /* Sources */,
+				E580278723C4FE6300FE1961 /* Frameworks */,
+				E580278823C4FE6300FE1961 /* Resources */,
+				6E90DA2FB0E279DC4E4C1798 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E580278C23C4FE6300FE1961 /* PBXTargetDependency */,
+			);
+			name = "Plant WatchUITests";
+			productName = "Plant WatchUITests";
+			productReference = E580278A23C4FE6300FE1961 /* Plant WatchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E580276123C4FE6100FE1961 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Jose Arellanes";
+				TargetAttributes = {
+					E580276823C4FE6100FE1961 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					E580277E23C4FE6300FE1961 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = E580276823C4FE6100FE1961;
+					};
+					E580278923C4FE6300FE1961 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = E580276823C4FE6100FE1961;
+					};
+				};
+			};
+			buildConfigurationList = E580276423C4FE6100FE1961 /* Build configuration list for PBXProject "Plant Watch" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E580276023C4FE6100FE1961;
+			productRefGroup = E580276A23C4FE6100FE1961 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E580276823C4FE6100FE1961 /* Plant Watch */,
+				E580277E23C4FE6300FE1961 /* Plant WatchTests */,
+				E580278923C4FE6300FE1961 /* Plant WatchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E580276723C4FE6100FE1961 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E580277923C4FE6300FE1961 /* LaunchScreen.storyboard in Resources */,
+				E580277623C4FE6300FE1961 /* Preview Assets.xcassets in Resources */,
+				E580277323C4FE6300FE1961 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E580277D23C4FE6300FE1961 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E580278823C4FE6300FE1961 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DF94BE91B1242526B771D6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Plant Watch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E90DA2FB0E279DC4E4C1798 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Plant Watch-Plant WatchUITests/Pods-Plant Watch-Plant WatchUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Plant Watch-Plant WatchUITests/Pods-Plant Watch-Plant WatchUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Plant Watch-Plant WatchUITests/Pods-Plant Watch-Plant WatchUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9095E441D05AD55CE31BEF41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Plant Watch-Plant WatchUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACB0E5F134C6EA1D77B8BF1E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Plant WatchTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBDDDB7E690755B023079D7A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Plant Watch/Pods-Plant Watch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Plant Watch/Pods-Plant Watch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Plant Watch/Pods-Plant Watch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E580276523C4FE6100FE1961 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E580276D23C4FE6100FE1961 /* AppDelegate.swift in Sources */,
+				E580279E23C5057300FE1961 /* mainView.swift in Sources */,
+				E5FDF93D23C6615E00CEDFC7 /* userView.swift in Sources */,
+				E58027A123C505A100FE1961 /* mainViewController.swift in Sources */,
+				E580276F23C4FE6100FE1961 /* SceneDelegate.swift in Sources */,
+				E57126EA23C7C53C00DBD61A /* BTService.m in Sources */,
+				E5FDF94023C67D4100CEDFC7 /* colorExtensions.swift in Sources */,
+				E57126F023C7C9D100DBD61A /* File.swift in Sources */,
+				E57126E923C7C53C00DBD61A /* BTDiscovery.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E580277B23C4FE6300FE1961 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E580278423C4FE6300FE1961 /* Plant_WatchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E580278623C4FE6300FE1961 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E580278F23C4FE6300FE1961 /* Plant_WatchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E580278123C4FE6300FE1961 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E580276823C4FE6100FE1961 /* Plant Watch */;
+			targetProxy = E580278023C4FE6300FE1961 /* PBXContainerItemProxy */;
+		};
+		E580278C23C4FE6300FE1961 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E580276823C4FE6100FE1961 /* Plant Watch */;
+			targetProxy = E580278B23C4FE6300FE1961 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E580277723C4FE6300FE1961 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E580277823C4FE6300FE1961 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E580279123C4FE6300FE1961 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E580279223C4FE6300FE1961 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E580279423C4FE6300FE1961 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEE458EC8439A0370E3D4AA9 /* Pods-Plant Watch.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Plant Watch/Preview Content\"";
+				DEVELOPMENT_TEAM = X8YHVPV5FA;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Plant Watch/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jose.gif-search.Plant-Watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E580279523C4FE6300FE1961 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0968BFD903ED02DD10731714 /* Pods-Plant Watch.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Plant Watch/Preview Content\"";
+				DEVELOPMENT_TEAM = X8YHVPV5FA;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Plant Watch/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jose.gif-search.Plant-Watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E580279723C4FE6300FE1961 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2D9565BCB95CB793F0EE53E /* Pods-Plant WatchTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Plant WatchTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jose.gif-search.Plant-WatchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plant Watch.app/Plant Watch";
+			};
+			name = Debug;
+		};
+		E580279823C4FE6300FE1961 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 219B4C64EEBCFE273AD93162 /* Pods-Plant WatchTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Plant WatchTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jose.gif-search.Plant-WatchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plant Watch.app/Plant Watch";
+			};
+			name = Release;
+		};
+		E580279A23C4FE6300FE1961 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8900D52127B00FE21BBB0E3F /* Pods-Plant Watch-Plant WatchUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Plant WatchUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jose.gif-search.Plant-WatchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Plant Watch";
+			};
+			name = Debug;
+		};
+		E580279B23C4FE6300FE1961 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23AF332EDFFED36F1046BEC1 /* Pods-Plant Watch-Plant WatchUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Plant WatchUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jose.gif-search.Plant-WatchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Plant Watch";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E580276423C4FE6100FE1961 /* Build configuration list for PBXProject "Plant Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E580279123C4FE6300FE1961 /* Debug */,
+				E580279223C4FE6300FE1961 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E580279323C4FE6300FE1961 /* Build configuration list for PBXNativeTarget "Plant Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E580279423C4FE6300FE1961 /* Debug */,
+				E580279523C4FE6300FE1961 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E580279623C4FE6300FE1961 /* Build configuration list for PBXNativeTarget "Plant WatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E580279723C4FE6300FE1961 /* Debug */,
+				E580279823C4FE6300FE1961 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E580279923C4FE6300FE1961 /* Build configuration list for PBXNativeTarget "Plant WatchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E580279A23C4FE6300FE1961 /* Debug */,
+				E580279B23C4FE6300FE1961 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E580276123C4FE6100FE1961 /* Project object */;
+}
