@@ -36,9 +36,7 @@ struct IconView: View{
   let uLineWidth: CGFloat = 10
     var body: some View{
     VStack(spacing:40){
-            // Text("Hello")
-              //  .font(.title)
-                //.foregroundColor(.green)
+            
             FuberU(percent: percent)
             .stroke(Color.green, lineWidth: uLineWidth)
             .onAppear() {

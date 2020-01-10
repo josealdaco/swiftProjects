@@ -12,7 +12,7 @@ var connection = false{
           print("Connection made")
       }
   }
-
+ /// Temparary default responses
 var randomSpeaks = ["SIKE!😂", "In Progress...", "HOLD TF UP", "V.2 soon", "Nopeee"]
 struct userView:View{
   
