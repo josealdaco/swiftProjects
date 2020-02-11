@@ -14,12 +14,12 @@ var connection = false{
   }
  /// Temparary default responses
 var randomSpeaks = ["SIKE!😂", "In Progress...", "HOLD TF UP", "V.2 soon", "Nopeee"]
+var toggle = false
 struct userView:View{
   
     @ObservedObject var bleConnection = BLEConnection()
-    @State var toggle = false
-    @State var dataString:String = "Data Output here"
     @State var timer = 0
+    @State private var showGreeting = false
     var body: some View{
         VStack{
             Text("Connection: ")
@@ -29,10 +29,13 @@ struct userView:View{
                 .frame(width:50, height:50, alignment: .center )
                 .foregroundColor(bleConnection.connect)
             Spacer()
+            Toggle(isOn:$showGreeting){
+                Text("AUTOSAVE")
+            }.padding()
            List(bleConnection.scannedBLEDevices, id: \.self) { device in
                                      Text(verbatim: device)
                                  }
-            Text(self.dataString)
+            Text(bleConnection.dataString)
                 .font(.largeTitle)
                 .fontWeight(.heavy)
             Spacer()
@@ -41,9 +44,20 @@ struct userView:View{
                   This File is the main UI for bluetooth connections
                  */
                 
-                let number = Int.random(in: 0 ..< randomSpeaks.count)
-                self.dataString = randomSpeaks[number]
-                self.toggle = false
+                /// Place the Write to Arduino data here
+                if(self.bleConnection.char != nil){
+                    print("Characteristic found in the Front end\(String(describing: self.bleConnection.char))")
+                    ///let number = Int.random(in: 0 ..< randomSpeaks.count)
+                    ///self.dataString = randomSpeaks[number]
+                    let data:UInt8 = UInt8(31)/// sends a 1 in uint8
+                    self.bleConnection.writeLEDValueToChar( withCharacteristic: self.bleConnection.char, withValue: Data([data]));
+                    self.bleConnection.peripheral.setNotifyValue(true, for: self.bleConnection.char)
+                
+                    toggle = true
+                    
+                }
+ 
+            
             }){
                 Text("GET DATA")
                     .foregroundColor(.white)

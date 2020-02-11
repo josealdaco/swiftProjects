@@ -2,13 +2,15 @@ import Foundation
 import UIKit
 import SwiftUI
 import CoreBluetooth
-
+ /// Resource for recieving bluetooth data: stackoverflow.com/questions/35794107/swift-ble-communications
 open class BLEConnection: NSObject, CBPeripheralDelegate, CBCentralManagerDelegate, ObservableObject {
     // Properties
     
     private var centralManager: CBCentralManager! = nil
-    private var peripheral: CBPeripheral!
+    @Published var peripheral: CBPeripheral!
     @Published var connect = Color.red
+    @Published var char: CBCharacteristic! = nil
+    @Published var dataString = "PESS BUTTON"
     public static let bleServiceUUID = CBUUID.init(string: "FFE0")
     public static let bleCharacteristicUUID = CBUUID.init(string:   "FFE1")
     // Array to contain names of BLE devices to connect to.
@@ -82,23 +84,22 @@ open class BLEConnection: NSObject, CBPeripheralDelegate, CBCentralManagerDelega
                 }
             }
         }
-
+    
     // Handling discovery of characteristics
     public func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
               if let characteristics = service.characteristics {
                   for characteristic in characteristics {
                       if characteristic.uuid == BLEConnection.bleCharacteristicUUID {
                           print("Characteristics found:", characteristic)
-                        
-                                   let data:UInt8 = UInt8(31)
-
-                        writeLEDValueToChar( withCharacteristic: characteristic, withValue: Data([data]))
+                        char = characteristic
+                                   
                              /*
                          This is where the didUpdate value will occer.
                             */
-
-
-                                   
+                        //let data:UInt8 = UInt8(31)/// sends a 1 in uint8
+                        
+                        //peripheral.writeValue(Data([data]), for: characteristic, type: .withoutResponse)
+                         //  peripheral.setNotifyValue(true, for: characteristic)
                       } else{
                         print("Not found")
                     }
@@ -108,7 +109,7 @@ open class BLEConnection: NSObject, CBPeripheralDelegate, CBCentralManagerDelega
         print("passed")
           }
    
-      private func writeLEDValueToChar( withCharacteristic characteristic: CBCharacteristic, withValue value: Data) {
+      public func writeLEDValueToChar( withCharacteristic characteristic: CBCharacteristic, withValue value: Data) {
 
               // Check if it has the write property
               if characteristic.properties.contains(.writeWithoutResponse) && peripheral != nil {
@@ -144,8 +145,10 @@ open class BLEConnection: NSObject, CBPeripheralDelegate, CBCentralManagerDelega
             let dataBLE = String(data: characteristic.value!, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
 
             print("Data from Arduino:\(dataBLE!)")
+            dataString = dataBLE!
         }
+        
     }
-
+    
 
 }
