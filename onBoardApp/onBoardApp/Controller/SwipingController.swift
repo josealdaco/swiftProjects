@@ -14,7 +14,7 @@ class SwipingController: UICollectionViewController,  UICollectionViewDelegateFl
     let pages = [
         Page(imageName: "climate_change" , headerText: "We will channge the world", bodyText: "Green earth, hapy life"),
         Page(imageName: "helping_hand", headerText: "Remember to always give a helping hand", bodyText: "Helping one, help a million"),
-        Page(imageName: "water_droplets", headerText: "Reduce the amount of water you cconsume", bodyText: "Water is at cost")
+        Page(imageName: "water_droplets", headerText: "Reduce the amount of water you cconsume", bodyText: "")
     ]
     
     
@@ -41,8 +41,9 @@ class SwipingController: UICollectionViewController,  UICollectionViewDelegateFl
         cell.page = page
         print(indexPath.item)
         if indexPath.item == pages.count-1{
-            print("We are going to make it appear")
-          //  cell.next_Button.isHidden = true
+            cell.login_Button.isHidden = false
+            cell.login_Button.addTarget(self, action: #selector(nextWindow), for: .touchUpInside)
+
         }
        // cell.backgroundColor = indexPath.item % 2 == 0 ? .red : .green   Left is true, right is Even. Also remember if asked in an Interview
         return cell
@@ -50,5 +51,13 @@ class SwipingController: UICollectionViewController,  UICollectionViewDelegateFl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: view.frame.height)
+    }
+    
+    @objc func nextWindow(){
+//        print("new Window")
+        let navigationController = UINavigationController(rootViewController: HomePage() )
+        navigationController.topViewController?.title = "HOMESCREEN"
+        self.view.window!.rootViewController = navigationController //you can set it as root
+        
     }
 }

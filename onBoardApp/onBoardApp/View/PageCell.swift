@@ -22,12 +22,21 @@ class PageCell: UICollectionViewCell {
         }
     }
     
-    private let login_Button: UIButton = {
+    
+    
+    
+    
+     let login_Button: UIButton = {
               let next_Button = UIButton(type: .system)
-              next_Button.setTitle("Next", for: .normal)
+              next_Button.setTitle("LOGIN", for: .normal)
+              next_Button.isHidden = true
               next_Button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-              next_Button.setTitleColor(.mainGreen, for: .normal)
+              next_Button.setTitleColor(.white, for: .normal)
+                next_Button.backgroundColor = UIColor.mainGreen
               next_Button.translatesAutoresizingMaskIntoConstraints = false
+                
+        
+        
              return next_Button
           }()
        
@@ -49,7 +58,7 @@ class PageCell: UICollectionViewCell {
         header_Title.textAlignment = .center
         header_Title.isEditable = false
         header_Title.isScrollEnabled = false
-        header_Title.backgroundColor = .purple
+        header_Title.backgroundColor =  UIColor.purple;
         header_Title.translatesAutoresizingMaskIntoConstraints = false
        return header_Title
     }()
@@ -73,25 +82,26 @@ class PageCell: UICollectionViewCell {
            worldImageView.centerYAnchor.constraint(equalTo: container_View.centerYAnchor).isActive = true
            worldImageView.heightAnchor.constraint(equalTo: container_View.heightAnchor, multiplier: 0.5).isActive = true
            addSubview(header_Title)
+            addSubview(login_Button)
            // Text View setup
            header_Title.topAnchor.constraint(equalTo:container_View.bottomAnchor).isActive = true
-        header_Title.bottomAnchor.constraint(equalTo: login_Button.bottomAnchor).isActive = true
+        header_Title.bottomAnchor.constraint(equalTo: login_Button.topAnchor, constant: 40).isActive = true
            header_Title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25).isActive = true
            header_Title.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25).isActive = true
-        login_Button.topAnchor.constraint(equalTo: header_Title.bottomAnchor).isActive = true
-        login_Button.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        login_Button.topAnchor.constraint(equalTo: header_Title.bottomAnchor, constant: -30).isActive = true
+        login_Button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
         login_Button.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
         login_Button.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true
-        login_Button.heightAnchor.constraint(equalTo: worldImageView.heightAnchor).isActive = true
+        login_Button.heightAnchor.constraint(lessThanOrEqualToConstant: 200).isActive = true
        }
        
     
     
     override init(frame: CGRect) {
         super.init(frame:frame)
-        backgroundColor = .purple
-        addSubview(login_Button)
         Layout_Setup()
+
+        backgroundColor = .purple
     }
     
     required init?(coder: NSCoder) {
