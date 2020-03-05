@@ -129,7 +129,7 @@ class LoggingController: UIViewController {
     
     @objc func showHome(){
        let navigationController = UINavigationController(rootViewController: HomePage() )
-        navigationController.topViewController?.title = "HOME SCREEN"
+        navigationController.setNavigationBarHidden(true, animated: false)
         self.view.window!.rootViewController = navigationController //you can set it as root
     }
     

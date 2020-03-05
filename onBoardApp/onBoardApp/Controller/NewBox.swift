@@ -18,64 +18,61 @@ class NewBox: UIViewController {
         
         //TODO: Register the cell
         collectionView.register(Cell.self, forCellWithReuseIdentifier: Cell.identifier)
-        
+        collectionView.backgroundColor = .darkGray
         return collectionView
     }()
     
-    var data: [ServicesModel] =  [ServicesModel(image: UIImage(named: "food")!, title: "Treats" ),ServicesModel(image: UIImage(named: "food")!, title: "Food" ),ServicesModel(image: UIImage(named: "food")!, title: "Bath" ),ServicesModel(image: UIImage(named: "food")!, title: "Shower" ),ServicesModel(image: UIImage(named: "food")!, title: "Run" ),]
+    var data: [ServicesModel] =  [ServicesModel(image: UIImage(named: "helping_hand")!, title: "Treats" ),ServicesModel(image: UIImage(named: "meds")!, title: "Food" ),ServicesModel(image: UIImage(named: "dogtoy")!, title: "Bath" ),ServicesModel(image: UIImage(named: "dogbrush")!, title: "Shower" ),ServicesModel(image: UIImage(named: "petFood")!, title: "Run" ),]
     
     override func loadView() {
         super.loadView()
+       
         view.addSubview(collectionView)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .darkGray
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Update", style: .done, target: self, action: #selector(showOptions(controller:)))
     }
     
     
     @objc func showOptions(controller: UIViewController) {
         let alert = UIAlertController(title: "Options", message: "Choose an update", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Example", style: .default, handler: { (_) in
-            self.collectionView.performBatchUpdates({
-//                self.data[3] = "😦"
-                let updated = self.data[3]
-                self.data.remove(at: 3)
-                self.data.insert(updated, at: 0)
-                
-                self.collectionView.deleteItems(at: [IndexPath(item: 3, section: 0)])
-                self.collectionView.insertItems(at: [IndexPath(item: 0, section: 0)])
-                
-            }, completion: nil)
-            
+//        alert.addAction(UIAlertAction(title: "Example", style: .default, handler: { (_) in
+//            self.collectionView.performBatchUpdates({
+////                self.data[3] = "😦"
+//                let updated = self.data[3]
+//                self.data.remove(at: 3)
+//                self.data.insert(updated, at: 0)
+//
+//                self.collectionView.deleteItems(at: [IndexPath(item: 3, section: 0)])
+//                self.collectionView.insertItems(at: [IndexPath(item: 0, section: 0)])
+//
+//            }, completion: nil)
+//
+//        }))
+        
+        alert.addAction(UIAlertAction(title: "Insert card at the beginning", style: .default, handler: { (_) in
+            self.data.insert( ServicesModel(image: UIImage(named: "helping_hand")!, title: "Food"), at: 0)
+                   self.collectionView.insertItems(at: [IndexPath(item: 0, section: 0)])
         }))
         
-        alert.addAction(UIAlertAction(title: "Insert 3 emojis at the beginning", style: .default, handler: { (_) in
-        }))
-//        self.data[0] = "😦"
-//        self.data[1] = "😦"
-//        self.data[2] = "😦"
-        
-        self.data.remove(at: 0)
-        self.data.remove(at: 1)
-        self.data.remove(at: 2)
-//        self.data.insert(, at: <#T##Int#>)
-        
-        alert.addAction(UIAlertAction(title: "Update item at 5 with an emoji", style: .default, handler: { (_) in
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Delete first 2 items, insert 3 items at the end", style: .default, handler: { (_) in
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Delete first 3, insert 1 item at the beginning", style: .default, handler: { (_) in
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Delete first 3 items, insert 1 item at end", style: .default, handler: { (_) in
-        }))
+
+//        alert.addAction(UIAlertAction(title: "Update item at 5 with an emoji", style: .default, handler: { (_) in
+//        }))
+//
+//        alert.addAction(UIAlertAction(title: "Delete first 2 items, insert 3 items at the end", style: .default, handler: { (_) in
+//        }))
+//
+//        alert.addAction(UIAlertAction(title: "Delete first 3, insert 1 item at the beginning", style: .default, handler: { (_) in
+//        }))
+//
+//        alert.addAction(UIAlertAction(title: "Delete first 3 items, insert 1 item at end", style: .default, handler: { (_) in
+//        }))
         
         alert.addAction(UIAlertAction(title: "Reset", style: .default, handler: { (_) in
-//            self.data = Array(repeating: "🦕", count: 10)
+            self.data = [ServicesModel(image: UIImage(named: "helping_hand")!, title: "Treats" ),ServicesModel(image: UIImage(named: "meds")!, title: "Food" ),ServicesModel(image: UIImage(named: "dogtoy")!, title: "Bath" ),ServicesModel(image: UIImage(named: "dogbrush")!, title: "Shower" ),ServicesModel(image: UIImage(named: "petFood")!, title: "Run" ),]
             self.collectionView.reloadData()
         }))
         
@@ -101,7 +98,7 @@ extension NewBox: UICollectionViewDataSource {
 //        let data = self.data[indexPath.item]
         cell.itemButton.tag = indexPath.row
         cell.itemButton.addTarget(self, action: #selector(subscribeTapped(_:)), for: .touchUpInside)
-        cell.itemButton.setTitle(data[indexPath.item].title, for: .normal)
+        cell.itemButton.setImage(data[indexPath.item].image, for: .normal)
         return cell
     }
     
@@ -115,7 +112,7 @@ extension NewBox: UICollectionViewDataSource {
     
     
     @objc func subscribeTapped(_ sender: UIButton){
-      let data = self.data[sender.tag]
+        let data = self.data[0]
       let alert = UIAlertController(title: "Subscribed!", message: "Subscribed to \(data)", preferredStyle: .alert)
       let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
       alert.addAction(okAction)

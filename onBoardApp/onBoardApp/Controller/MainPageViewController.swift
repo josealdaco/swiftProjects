@@ -30,7 +30,7 @@ class MainPageViewController: UIViewController {
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            self.title = "Compositional Layout"
+            self.title = "Home Screen"
             self.view.backgroundColor = UIColor.black
             setupCollectionView()
         }

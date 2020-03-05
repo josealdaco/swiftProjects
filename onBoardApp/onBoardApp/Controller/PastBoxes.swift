@@ -23,6 +23,7 @@ class PastBoxes: UIViewController, UITableViewDelegate, UITableViewDataSource  {
         let imgView = UIImageView()
         imgView.image = boxesArray[indexPath.item].image
         cell.addSubview(imgView)
+        cell.backgroundColor = .darkGray
         cell.accessoryType = .detailDisclosureButton
         return cell
     }
@@ -36,12 +37,13 @@ class PastBoxes: UIViewController, UITableViewDelegate, UITableViewDataSource  {
        table.translatesAutoresizingMaskIntoConstraints = false
        table.rowHeight = 100
         table.addSubview(UIImageView())
+        table.backgroundColor = .darkGray
        return table
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.green
+        self.view.backgroundColor = .darkGray
         setTable()
         // Do any additional setup after loading the view.
     }

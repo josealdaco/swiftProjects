@@ -20,6 +20,7 @@ class FavoritesCell: UICollectionViewCell {
     
     func setup(){
         imgView.layer.cornerRadius = 10
+        titleLabel.textColor = .white
     }
     
 }

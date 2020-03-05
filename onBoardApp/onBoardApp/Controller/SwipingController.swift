@@ -12,9 +12,9 @@ class SwipingController: UICollectionViewController,  UICollectionViewDelegateFl
     /* Swiping feature in UI*/
     
     let pages = [
-        Page(imageName: "climate_change" , headerText: "We will channge the world", bodyText: "Green earth, hapy life"),
-        Page(imageName: "helping_hand", headerText: "Remember to always give a helping hand", bodyText: "Helping one, help a million"),
-        Page(imageName: "water_droplets", headerText: "Reduce the amount of water you cconsume", bodyText: "")
+        Page(imageName: "climate_change" , headerText: "Our products are earh friendly", bodyText: "Green earth, healthy pets"),
+        Page(imageName: "helping_hand", headerText: "Portion of revenue goes to dog shelters", bodyText: "Helping one, help a million"),
+        Page(imageName: "water_droplets", headerText: "Don't make a puppy cry now", bodyText: ":(")
     ]
     
     

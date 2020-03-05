@@ -20,5 +20,6 @@ class FeaturedCell: UICollectionViewCell {
 
     func setup(){
         imgView.layer.cornerRadius = 10
+        titlelabel.textColor = .white
     }
 }

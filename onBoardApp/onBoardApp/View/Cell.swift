@@ -28,11 +28,8 @@ class Cell: UICollectionViewCell {
             ])
         
         // Customization
-        self.backgroundColor = UIColor.lightGray
         self.itemButton = itemButton
 //        self.itemButton.setTitle("", for: .normal)
-        self.itemButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 50)
-        self.itemButton.setTitleColor(.white, for: .normal)
         self.itemButton.layer.cornerRadius = 12.0
         self.itemButton.backgroundColor = .purple
         NSLayoutConstraint.activate([

@@ -28,15 +28,13 @@ class PageCell: UICollectionViewCell {
     
      let login_Button: UIButton = {
               let next_Button = UIButton(type: .system)
-              next_Button.setTitle("LOGIN", for: .normal)
+              next_Button.setTitle("CONTINUE", for: .normal)
               next_Button.isHidden = true
-              next_Button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+              next_Button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
               next_Button.setTitleColor(.white, for: .normal)
-                next_Button.backgroundColor = UIColor.mainGreen
+              next_Button.backgroundColor = UIColor.darkGray
               next_Button.translatesAutoresizingMaskIntoConstraints = false
-                
-        
-        
+            next_Button.layer.cornerRadius = 24
              return next_Button
           }()
        

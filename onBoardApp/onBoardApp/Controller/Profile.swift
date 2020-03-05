@@ -20,13 +20,11 @@ struct Profile: View {
             CircleImage()
                 .offset(y: -130)
                 .padding(.bottom, -130)
-            
+         
             VStack(alignment: .center) {
                 Text("Deep Sleep Needed")
                     .font(.title)
                     .padding()
-                    .foregroundColor(.black)
-
                 Text("San Francisco, CA")
                     .font(.subheadline)
                 .foregroundColor(.black)
@@ -37,7 +35,6 @@ struct Profile: View {
 
             }
             .padding()
-
         }
     }
 }
