@@ -11,14 +11,18 @@ import UIKit
 class PastBoxes: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
  
-    let boxesArray = [String](repeating: "Dummy Data", count: 10)
+    let boxesArray: [ServicesModel] =  [ServicesModel(image: UIImage(named: "food")!, title: "January" ),ServicesModel(image: UIImage(named: "food")!, title: "July" ),ServicesModel(image: UIImage(named: "food")!, title: "March" ),ServicesModel(image: UIImage(named: "food")!, title: "October" ),ServicesModel(image: UIImage(named: "food")!, title: "December" ),]
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return boxesArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BoxCell", for: indexPath)
-        cell.textLabel?.text = "\(indexPath.row) \(boxesArray[indexPath.row])"
+        cell.textLabel?.text = boxesArray[indexPath.item].title
+        let imgView = UIImageView()
+        imgView.image = boxesArray[indexPath.item].image
+        cell.addSubview(imgView)
         cell.accessoryType = .detailDisclosureButton
         return cell
     }
@@ -31,6 +35,7 @@ class PastBoxes: UIViewController, UITableViewDelegate, UITableViewDataSource  {
        let table = UITableView()
        table.translatesAutoresizingMaskIntoConstraints = false
        table.rowHeight = 100
+        table.addSubview(UIImageView())
        return table
     }()
     

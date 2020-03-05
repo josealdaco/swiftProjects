@@ -22,7 +22,7 @@ class NewBox: UIViewController {
         return collectionView
     }()
     
-    var data: [String] = Array(repeating: "🦕", count: 8)
+    var data: [ServicesModel] =  [ServicesModel(image: UIImage(named: "food")!, title: "Treats" ),ServicesModel(image: UIImage(named: "food")!, title: "Food" ),ServicesModel(image: UIImage(named: "food")!, title: "Bath" ),ServicesModel(image: UIImage(named: "food")!, title: "Shower" ),ServicesModel(image: UIImage(named: "food")!, title: "Run" ),]
     
     override func loadView() {
         super.loadView()
@@ -39,7 +39,7 @@ class NewBox: UIViewController {
         let alert = UIAlertController(title: "Options", message: "Choose an update", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Example", style: .default, handler: { (_) in
             self.collectionView.performBatchUpdates({
-                self.data[3] = "😦"
+//                self.data[3] = "😦"
                 let updated = self.data[3]
                 self.data.remove(at: 3)
                 self.data.insert(updated, at: 0)
@@ -53,9 +53,9 @@ class NewBox: UIViewController {
         
         alert.addAction(UIAlertAction(title: "Insert 3 emojis at the beginning", style: .default, handler: { (_) in
         }))
-        self.data[0] = "😦"
-        self.data[1] = "😦"
-        self.data[2] = "😦"
+//        self.data[0] = "😦"
+//        self.data[1] = "😦"
+//        self.data[2] = "😦"
         
         self.data.remove(at: 0)
         self.data.remove(at: 1)
@@ -75,7 +75,7 @@ class NewBox: UIViewController {
         }))
         
         alert.addAction(UIAlertAction(title: "Reset", style: .default, handler: { (_) in
-            self.data = Array(repeating: "🦕", count: 10)
+//            self.data = Array(repeating: "🦕", count: 10)
             self.collectionView.reloadData()
         }))
         
@@ -101,7 +101,7 @@ extension NewBox: UICollectionViewDataSource {
 //        let data = self.data[indexPath.item]
         cell.itemButton.tag = indexPath.row
         cell.itemButton.addTarget(self, action: #selector(subscribeTapped(_:)), for: .touchUpInside)
-
+        cell.itemButton.setTitle(data[indexPath.item].title, for: .normal)
         return cell
     }
     

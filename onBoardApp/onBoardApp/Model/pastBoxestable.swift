@@ -29,8 +29,11 @@ func setup() {
     background.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor).isActive = true
     background.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor).isActive = true
     
-
 }
+    let backgroundImage: UIImageView = {
+        let backgroundImage = UIImageView()
+        return backgroundImage
+    }()
     
     let background : UIView = {
     let background = UIView()

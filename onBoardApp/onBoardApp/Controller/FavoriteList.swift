@@ -9,7 +9,8 @@
 import UIKit
 
 class FavoriteList: UIViewController, UITableViewDelegate, UITableViewDataSource{
-    let favoriteboxesArray = [String](repeating: "Dummy Data", count: 4)
+    let favoriteboxesArray:[ServicesModel] =  [ServicesModel(image: UIImage(named: "food")!, title: "Dog Food" ),ServicesModel(image: UIImage(named: "food")!, title: "Treats" ),ServicesModel(image: UIImage(named: "food")!, title: "Dog Food" ),ServicesModel(image: UIImage(named: "food")!, title: "Baths" ),ServicesModel(image: UIImage(named: "food")!, title: "Cat Food" ),]
+    
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return favoriteboxesArray.count
@@ -17,7 +18,7 @@ class FavoriteList: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteBoxCell", for: indexPath)
-        cell.textLabel?.text = "\(indexPath.row) \(favoriteboxesArray[indexPath.row])"
+        cell.textLabel?.text = favoriteboxesArray[indexPath.item].title
 //        cell.accessoryType = .detailDisclosureButton
         return cell
     }

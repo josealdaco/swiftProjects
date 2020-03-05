@@ -12,7 +12,7 @@
 import Foundation
 import UIKit
 import SwiftUI
-import PureLayout
+//import PureLayout
 var checker = false{
     didSet{
         print("it is true")

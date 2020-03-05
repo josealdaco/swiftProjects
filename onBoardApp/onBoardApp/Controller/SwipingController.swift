@@ -42,7 +42,7 @@ class SwipingController: UICollectionViewController,  UICollectionViewDelegateFl
         print(indexPath.item)
         if indexPath.item == pages.count-1{
             cell.login_Button.isHidden = false
-            cell.login_Button.addTarget(self, action: #selector(nextWindow), for: .touchUpInside)
+            cell.login_Button.addTarget(self, action: #selector(logginWindow), for: .touchUpInside)
 
         }
        // cell.backgroundColor = indexPath.item % 2 == 0 ? .red : .green   Left is true, right is Even. Also remember if asked in an Interview
@@ -53,11 +53,12 @@ class SwipingController: UICollectionViewController,  UICollectionViewDelegateFl
         return CGSize(width: view.frame.width, height: view.frame.height)
     }
     
-    @objc func nextWindow(){
-//        print("new Window")
-        let navigationController = UINavigationController(rootViewController: HomePage() )
-        navigationController.topViewController?.title = "HOMESCREEN"
+    
+     @objc func logginWindow(){
+    //           print("new Window")
+        let navigationController = UINavigationController(rootViewController: LoggingController() )
+        navigationController.topViewController?.title = "LOGGINSCREEN"
         self.view.window!.rootViewController = navigationController //you can set it as root
-        
-    }
+
+               }
 }

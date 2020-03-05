@@ -6,25 +6,44 @@
 //  Copyright © 2020 Jose Arellanes. All rights reserved.
 //
 
-import UIKit
+import SwiftUI
 
-class Profile: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = .darkGray
-        // Do any additional setup after loading the view.
-    }
+struct Profile: View {
     
+    var body: some View {
+        VStack {
+            MapView()
+                .edgesIgnoringSafeArea(.top)
+                .frame(height: 300)
+            
+            CircleImage()
+                .offset(y: -130)
+                .padding(.bottom, -130)
+            
+            VStack(alignment: .center) {
+                Text("Deep Sleep Needed")
+                    .font(.title)
+                    .padding()
+                    .foregroundColor(.black)
 
-    /*
-    // MARK: - Navigation
+                Text("San Francisco, CA")
+                    .font(.subheadline)
+                .foregroundColor(.black)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+                Text("Drifting off nation wide")
+                    .font(.subheadline)
+                .foregroundColor(.black)
+
+            }
+            .padding()
+
+        }
     }
-    */
+}
 
+struct ContentView_Preview: PreviewProvider {
+    static var previews: some View {
+        Profile()
+    }
 }
